@@ -50,3 +50,6 @@ Control Flow allows you to execute code only when a particular condition is met
 - if
 -elif
 -else
+
+Methods
+Are functions that are built into objects
