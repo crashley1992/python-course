@@ -49,3 +49,19 @@ def yoda(str):
     ''.join(str.split()[::-1])    
 
 yoda('i am home')
+
+# ALMOST THERE: Given an integer n, 
+# return True if n is within 10 of either 100 or 200
+def num_range(n):
+    return((abs(100 - n) <=10) or (abs(200-n) <=10))
+
+num_range(90)
+
+# Given a list of ints, return True if the array contains 
+# a 3 next to a 3 somewhere.
+def has_33(nums):
+    for i in range(0, len(nums)-1):
+        if nums[i:i + 2]:
+            return True
+
+has_33([1,3,3])
