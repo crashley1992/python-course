@@ -2,18 +2,19 @@
 # import libary that has shuffle
 from random import shuffle
 
-words = ['maybe', 'stuff', 'because']
+words = ['maybe', 'stuff', 'cat']
 word_to_guess = []
 letters_to_guess = []
+correct_guesses = []
 shuffle(words)
-# print(words)
 
 def word_select():
     selected_word = words[0]
     word_to_guess.append(selected_word)
     word = word_to_guess[0]
     for letter in word:
-        return letters_to_guess.append(letter)
+        letters_to_guess.append(letter)
+        # print(letters_to_guess)
 
 
 def game_play():
@@ -25,8 +26,12 @@ def game_play():
         total_gueses += 1
         print(total_gueses)
         for letter in letters_to_guess:
-            if letter == guess:
-                print('correct ' + letter + ' is in the word')
-                
-
+            if guess == letter:
+                print(letter + ' correct')
+                correct_guesses.append(letter)
+                print(correct_guesses)
+                if len(correct_guesses) == len(letters_to_guess):
+                    print('You Won!')
+                    total_gueses = 10 #ends game loop
+                    
 game_play()
