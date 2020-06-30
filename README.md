@@ -53,3 +53,14 @@ Control Flow allows you to execute code only when a particular condition is met
 
 Methods
 Are functions that are built into objects
+
+Lambada: A small anonymous function. A lambda function can take any number of arguments, but can only have one expression.
+
+ex: x = lambda a: a + 10
+print(x(5))
+
+LEGB RULE:
+L: local - Names assigned in any way within a dunction def or lambda and not declared global in that function
+E: Enclosing function locals -  Names in the local scope of any and all enclosing functions (def or lambda) from inner to outer.
+G: Global (module) - names assigned at the top-level of module file, or declare global in a def within the file
+B: Built in (Python) - Names preassigned in the built-in names module: open, range, Syntax Error
