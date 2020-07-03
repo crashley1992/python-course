@@ -64,3 +64,8 @@ L: local - Names assigned in any way within a dunction def or lambda and not dec
 E: Enclosing function locals -  Names in the local scope of any and all enclosing functions (def or lambda) from inner to outer.
 G: Global (module) - names assigned at the top-level of module file, or declare global in a def within the file
 B: Built in (Python) - Names preassigned in the built-in names module: open, range, Syntax Error
+
+OOP 
+- allows programmers to create their own objects that have methods and attributes.
+-recall that after defining a string, list, dictionary, or other objects, you were able to call methods off of them with the .method_name() syntax
+-classes are CamelCase
