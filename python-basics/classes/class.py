@@ -36,72 +36,105 @@
 #     def get_circumference(self):
 #         return self.radius * pi * 2
 
-class Animal():
-    def __init__(self):
-        print('Animal Created')
+# class Animal():
+#     def __init__(self):
+#         print('Animal Created')
 
-    def who_am_i(self):
-        print('I am an animal')
+#     def who_am_i(self):
+#         print('I am an animal')
 
-    def eat(self):
-        print('I am a eating')
+#     def eat(self):
+#         print('I am a eating')
 
-myanimal = Animal()
-myanimal.who_am_i()
-
-
-# runs init off of animal, dog can access animal methods
-class Dog(Animal):
-
-    def __init__(self):
-        Animal.__init__(self)
-        print('Dog Created')
-
-    # can overwrite other method
-    def who_am_i(self):
-        print('I am a dog')
-
-mydog = Dog()
-mydog.who_am_i()
+# myanimal = Animal()
+# myanimal.who_am_i()
 
 
+# # runs init off of animal, dog can access animal methods
+# class Dog(Animal):
 
-# Polymophism
-class Dogs():
-    def __init__(self,name):
-        self.name =  name
+#     def __init__(self):
+#         Animal.__init__(self)
+#         print('Dog Created')
 
-    def speak(self):
-        return self.name + ' says woof'
+#     # can overwrite other method
+#     def who_am_i(self):
+#         print('I am a dog')
 
-class Cat():
-    def __init__(self,name):
-        self.name =  name
+# mydog = Dog()
+# mydog.who_am_i()
 
-    def speak(self):
-        return self.name + ' says meow'
 
-niko = Dogs('niko')
-felix = Cat('felix')
 
-print(niko.speak())
-print(felix.speak())
+# # Polymophism
+# class Dogs():
+#     def __init__(self,name):
+#         self.name =  name
 
-for pet_class in [niko,felix]:
-    print(type(pet_class))
-    print(type(pet_class.speak()))
+#     def speak(self):
+#         return self.name + ' says woof'
 
-# Abstract class
-class Animals():
-    def __init__(self,name):
-        self.name = name
+# class Cat():
+#     def __init__(self,name):
+#         self.name =  name
+
+#     def speak(self):
+#         return self.name + ' says meow'
+
+# niko = Dogs('niko')
+# felix = Cat('felix')
+
+# print(niko.speak())
+# print(felix.speak())
+
+# for pet_class in [niko,felix]:
+#     print(type(pet_class))
+#     print(type(pet_class.speak()))
+
+# # Abstract class
+# class Animals():
+#     def __init__(self,name):
+#         self.name = name
     
-    def speak(self):
-        raise NotImplemented('SubClass must implement absract method')
+#     def speak(self):
+#         raise NotImplemented('SubClass must implement absract method')
 
 
-class Doge(Animal):
-    def speak(self):
-        return self.name + " says meow"
+# class Doge(Animal):
+#     def speak(self):
+#         return self.name + " says meow"
 
-fido = Dog('Fido')
+# fido = Dog('Fido')
+
+
+# mylist = [1,2,3]
+# len(mylist)
+
+# class Sample():
+#     pass
+
+# mysample = Sample()
+# print(mysample)
+
+
+class Book():
+
+    def __init__(self,title,author,pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+    # returns string so print b shows text and not some crazy stuffs
+    def __str__(self):
+        return f"{self.title} by {self.author}"
+
+    def __len__(self):
+        return self.pages
+
+    def __del__ (self):
+        print('A book object has been deleted')
+    
+b = Book('Python rocks', 'Jose', 200)
+
+print(b)
+print(len(b))
+print(str(b))
