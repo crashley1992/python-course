@@ -69,3 +69,21 @@ OOP
 - allows programmers to create their own objects that have methods and attributes.
 -recall that after defining a string, list, dictionary, or other objects, you were able to call methods off of them with the .method_name() syntax
 -classes are CamelCase
+
+PyPi 
+- is a repository for open-source third party Python Packages
+- it's similar to rubygems in ruby work, and npm for node.js
+
+use pip install to install packages
+
+ex: pip install requests
+
+Error handling:
+try - this is the block of code to be attempted
+except - block or code will execute in case there is an error in try block
+finally - A final block of code to be executed regardless of an error
+
+Testing tools:
+Pylint - libary that looks at code and reports back issues
+
+unittest: built in library will allow to test your own programs and check if you are getting desired outputs
