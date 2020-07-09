@@ -87,3 +87,12 @@ Testing tools:
 Pylint - libary that looks at code and reports back issues
 
 unittest: built in library will allow to test your own programs and check if you are getting desired outputs
+
+Decorators:
+- allows you to tack on extra functionality to an alrady existing function
+- they use the @ operator and are then placed on top the original funcition.
+
+Generator functions:
+- allows us to write a function that can send back a value and then later resume to pick up where it left off
+- generates a sequence of values over time
+- use of yeild keyword
