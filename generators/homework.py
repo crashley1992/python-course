@@ -53,3 +53,4 @@ for n in range(101):
     else:
         print(f'Weird {n}')
         
+

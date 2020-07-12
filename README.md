@@ -96,3 +96,6 @@ Generator functions:
 - allows us to write a function that can send back a value and then later resume to pick up where it left off
 - generates a sequence of values over time
 - use of yeild keyword
+
+Collections:
+- 
